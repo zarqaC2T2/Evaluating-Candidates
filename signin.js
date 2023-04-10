@@ -11,13 +11,15 @@ function handelSubmitSign(e){
   
     }
     let infoArr=JSON.parse(localStorage.userInfo)
+    console.log(infoArr)
     for (let i = 0; i < infoArr.length; i++) {
         const element = infoArr[i].email;
+        const pass=infoArr[i].passWord;
+        const user= infoArr[i].user
+        console.log(user,pass,element)
         console.log(element)
         if(element===userSign.email){
-           alert(`welcome  ${infoArr[i].user}`)
-           location.replace("./welcome.html")
-           checkArr.push(userSign.email,userSign.passWord)
+      checkArr.push(userSign.email,pass,user)
         }
         
     }
@@ -26,15 +28,15 @@ function handelSubmitSign(e){
     if(!checkArr.includes(userSign.email)){
         alert(`seems like you dont have account ,sign up now`)
     }
-    if(checkArr[1]!=userSign.passWord){
+    if(checkArr.includes(userSign.email)&&checkArr[1]!==userSign.passWord){
         alert("wrong password")
     }
-    
-           
+    if(checkArr.includes(userSign.email)&&checkArr[1]==userSign.passWord){
+
+        alert(`welcome ${checkArr[2]} `)    
+        location.replace("./welcome.html")
+    }
         }
 
+
         
-    
-   
-
-
