@@ -77,19 +77,16 @@ body{
     inset -4px -4px 6px 0 rgba(255,255,255,.2),
     inset 4px 4px 6px 0 rgba(0, 0, 0, .4);
 }
-
 .navbar-custom {
   background-color: #007bff;
-  /* height: 70px; */
+  height: 70px;
 }
-
 
 .logo {
   font-size: 2rem;
   letter-spacing: 1px;
   cursor: pointer;
-  margin-left: 5rem;
-  margin-bottom: 20px;
+  margin-left: 1.5rem;
 }
 
 /* nav bar starts here */
@@ -98,7 +95,7 @@ body{
 .nav {
   display: flex;
   background-color: #007bfff2;
- height: 80px !important;
+
   align-items:center;
   justify-content: space-between;
   
@@ -113,12 +110,9 @@ body{
   /* background-color: antiquewhite; */
 }
 nav ul {
-  
   list-style:none;
   display: flex;
   column-gap: 3rem;
-  align-items: center;
-  justify-content: center;
  
 }
 
@@ -136,7 +130,7 @@ nav a {
 .nav div.logo {
   float: left;
   width: auto;
-  /* height: 65px; */
+  height: 65px;
   padding-left: 3rem;
 }
 
@@ -165,12 +159,10 @@ nav div a .logo:hover {
 }
 
 .nav div.main_list ul li {
-
-
-  padding-bottom: 20px;
-  padding-right: 2rem;
-  margin: 27.5px 0px;
-
+  width: auto;
+  height: auto;
+  padding: 0;
+  padding-right: 3rem;
 }
 
 .nav div.main_list ul li a {
@@ -193,16 +185,12 @@ nav div a .logo:hover {
 .navTrigger {
   display: none;
 }
-.container{
-  /* margin-bottom: 50px; */
-}
 
 .nav {
   padding-top: 20px;
   padding-bottom: 20px;
   -webkit-transition: all 0.4s ease;
   transition: all 0.4s ease;
-
 }
 .animate-charcter
 {
@@ -237,7 +225,7 @@ nav div a .logo:hover {
 
 @media screen and (min-width: 768px) and (max-width: 1024px) {
   .container {
-    margin-bottom: 20px;
+    margin: 0;
   }
 }
 
@@ -364,7 +352,6 @@ nav div a .logo:hover {
 }
 
 
-
 li a {
   color: white;
 }
@@ -391,4 +378,10 @@ li a {
  margin-right: 53rem; 
   /* margin-left: -rem;  */
   text-shadow: 2px 2px 5px black;
+}
+h6{
+  display:none;
+  color:red;
+  font-size:.8rem;
+  background-color: rgba(249, 249, 249, 0.0);
 }
