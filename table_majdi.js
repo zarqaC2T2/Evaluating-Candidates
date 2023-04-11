@@ -2,7 +2,7 @@ let arrData =[] // all the questions will be pushed here
 let numberOfPassedQuestions=0; // number of passed questions
 let questionButtons =document.querySelectorAll(".questionsButtons button")
 let arrDataTime=JSON.parse(localStorage.arrDataTime);
-
+console.log(questionButtons[0].disabled = true)
 if(localStorage.arrData != null && localStorage.NPQ != null){
     arrData=JSON.parse(localStorage.arrData)  
     numberOfPassedQuestions=JSON.parse(localStorage.NPQ) 
@@ -28,7 +28,7 @@ if(localStorage.arrData != null && localStorage.NPQ != null){
 
 
     function disablebuttons(){
-        for(let i=0; i<arrData.length; i++){
+        for(let i=0; i<questionButtons.length; i++){
             questionButtons[i].disabled = true;
             if(arrData[i].userAnswersymbol == arrData[i].Answersymbol){
                 questionButtons[i].style.background="#64FF6A";

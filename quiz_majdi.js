@@ -86,6 +86,7 @@ return false
 }
 
 }
+localStorage.setItem('arrData',JSON.stringify(arrData) );
 
  // Question number 1
 let Q1 = new Questions(  

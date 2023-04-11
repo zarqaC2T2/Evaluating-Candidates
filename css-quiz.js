@@ -2,7 +2,7 @@ let arrData =[] // all the questions will be pushed here
 let arrDataTime =[] 
 let numberOfPassedQuestions=0; // number of passed questions
 let index0=1;
-localStorage.clear();
+// localStorage.clear();
 let pnumQ=document.getElementById("pnumQ");
 
 
@@ -86,6 +86,7 @@ class Questions {  // class to clone the questions
     }
 
 }
+localStorage.setItem('arrData',JSON.stringify(arrData) );
 
 // Question number 1
 let Q1 = new Questions(
@@ -140,6 +141,7 @@ let Q5 = new Questions(
 );
 arrData.push(Q5)
 
+localStorage.setItem('arrData',JSON.stringify(arrData) );
 
 // hide show results buttons
 let showResultsButton = document.getElementById("ShowResultsButton");
