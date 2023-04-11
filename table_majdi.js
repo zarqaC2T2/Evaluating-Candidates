@@ -12,7 +12,18 @@ if(localStorage.arrData != null && localStorage.NPQ != null){
      disablebuttons()
      render0()
 
-}
+     // let user = JSON.parse(localStorage.userSign[0])
+    //  if(user.html==true){
+
+    //  }else if(user.css==true){
+
+    //  }else {
+
+
+    // }
+
+     }
+
 
 
 
@@ -31,20 +42,7 @@ if(localStorage.arrData != null && localStorage.NPQ != null){
 
 function render0(){
     for(let i=0;i<arrData.length;i++){
-//         <thead>
-//         <tr id="trhead">
-//         <th><p id="pnumQ">1 of 5 question</p></th>
-//         <th>
-//             <div class="timer-div">
-//                 <img style="width: 1.5rem;" src="https://uxwing.com/wp-content/themes/uxwing/download/time-and-date/stopwatch-icon.png"
-//                     width="1rem" />
-//                 <span class="time-left"></span>
-//             </div>
-//         </th>
 
-//     </tr>
-
-// </thead> 
 let body=document.getElementById("tbody");
 // let head=document.getElementById("thead");
 let trQT=document.createElement("tr");
