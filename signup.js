@@ -95,7 +95,7 @@ function handelSubmit(e) {
   let findDuplicates = arr => arr.filter((item, index) => arr.indexOf(item) !== index)
   console.log(findDuplicates(checkArr));
   if (findDuplicates(checkArr).length !== 0) {
-    alert("user Already exist")
+    // alert("user Already exist")
 
     infoArr.pop();
 
