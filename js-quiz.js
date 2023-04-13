@@ -100,7 +100,6 @@ let Q1 = new Questions(
     "D: Document Orientation Model",
     "C"
 );
-arrData.push(Q1)
 
 
 let Q2 = new Questions(
@@ -111,7 +110,6 @@ let Q2 = new Questions(
     "D: const",
     "A"
 );
-arrData.push(Q2)
 
 
 let Q3 = new Questions(
@@ -122,7 +120,6 @@ let Q3 = new Questions(
     "D: To compare two variables",
     "B"
 );
-arrData.push(Q3)
 
 let Q4 = new Questions(
     "Q3: What is the difference between " == " and " === " in JavaScript?",
@@ -132,7 +129,6 @@ let Q4 = new Questions(
     "D: None of the above",
     "B"
 );
-arrData.push(Q4)
 
 let Q5 = new Questions(
     "Q3: What is the purpose of a 'callback function' in JavaScript?",
@@ -142,10 +138,17 @@ let Q5 = new Questions(
     "D: To declare a new function",
     "B"
 );
-arrData.push(Q5)
+if(arrData[0]==undefined){
 
-localStorage.setItem('arrData',JSON.stringify(arrData) );
+    arrData.push(Q1)
+    arrData.push(Q2)
+    arrData.push(Q3)
+    arrData.push(Q4)
+    arrData.push(Q5)
 
+    localStorage.setItem('arrData',JSON.stringify(arrData) );
+    
+ }
 // hide show results buttons
 let showResultsButton = document.getElementById("ShowResultsButton");
 showResultsButton.style.display = "none";
