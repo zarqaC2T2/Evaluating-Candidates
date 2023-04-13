@@ -1,3 +1,5 @@
+
+
 const formSign=document.getElementById("formSign");
 let checkArr=[]
 checkPassword=[]
@@ -44,3 +46,12 @@ function handelSubmitSign(e){
    
 
 
+        $(".navTrigger").click(function () {
+            $(this).toggleClass("active");
+            console.log("Clicked menu");
+            $("#mainListDiv").toggleClass("show_list");
+            $("#mainListDiv").fadeIn();
+          });
+          
+          AOS.init();
+          
