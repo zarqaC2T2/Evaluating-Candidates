@@ -1,7 +1,35 @@
-let arrData = [] // all the questions will be pushed here
-let numberOfPassedQuestions = 0; // number of passed questions
-let index0 = 1;
-localStorage.clear();
+let arrData =[] // all the questions will be pushed here
+let arrDataTime =[] 
+let numberOfPassedQuestions=0; // number of passed questions
+let index0=1;
+// localStorage.clear();
+let pnumQ=document.getElementById("pnumQ");
+
+
+let user = JSON.parse(localStorage.userInfo)[0]
+let userInfo =JSON.parse(localStorage.userInfo)
+
+ if(user.js==true || user.css==true || user.html==true ){
+    numberOfPassedQuestions=JSON.parse(localStorage.NPQ)
+    arrData=JSON.parse(localStorage.arrData)
+    if(numberOfPassedQuestions>arrData.length/2){
+        location.replace("./pass.html")
+    }else{
+        location.replace("./failed.html")
+    }
+
+ }
+
+ userInfo[0].js=true
+
+localStorage.setItem('userInfo',JSON.stringify(userInfo) );
+
+
+
+
+
+
+
 
 class Questions {  // class to clone the questions
     constructor(Question, option1, option2, option3, option4, answer) { // constructor with question options and result
@@ -61,6 +89,7 @@ class Questions {  // class to clone the questions
     }
 
 }
+localStorage.setItem('arrData',JSON.stringify(arrData) );
 
 // Question number 1
 let Q1 = new Questions(
@@ -115,6 +144,7 @@ let Q5 = new Questions(
 );
 arrData.push(Q5)
 
+localStorage.setItem('arrData',JSON.stringify(arrData) );
 
 // hide show results buttons
 let showResultsButton = document.getElementById("ShowResultsButton");
@@ -168,6 +198,10 @@ function QbuttonF(i) {
 
 // function to render the next question
 function render(i) {
+
+    pnumQ.textContent=`${i+1} of ${arrData.length} question`;
+
+
     let body = document.getElementById("tbody");
     let trQ = document.createElement("tr");
     body.appendChild(trQ)

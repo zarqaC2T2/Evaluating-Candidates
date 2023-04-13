@@ -2,7 +2,7 @@ let arrData =[] // all the questions will be pushed here
 let numberOfPassedQuestions=0; // number of passed questions
 let questionButtons =document.querySelectorAll(".questionsButtons button")
 let arrDataTime=JSON.parse(localStorage.arrDataTime);
-
+console.log(questionButtons[0].disabled = true)
 if(localStorage.arrData != null && localStorage.NPQ != null){
     arrData=JSON.parse(localStorage.arrData)  
     numberOfPassedQuestions=JSON.parse(localStorage.NPQ) 
@@ -12,12 +12,23 @@ if(localStorage.arrData != null && localStorage.NPQ != null){
      disablebuttons()
      render0()
 
-}
+     // let user = JSON.parse(localStorage.userSign[0])
+    //  if(user.html==true){
+
+    //  }else if(user.css==true){
+
+    //  }else {
+
+
+    // }
+
+     }
+
 
 
 
     function disablebuttons(){
-        for(let i=0; i<arrData.length; i++){
+        for(let i=0; i<questionButtons.length; i++){
             questionButtons[i].disabled = true;
             if(arrData[i].userAnswersymbol == arrData[i].Answersymbol){
                 questionButtons[i].style.background="#64FF6A";
@@ -31,20 +42,7 @@ if(localStorage.arrData != null && localStorage.NPQ != null){
 
 function render0(){
     for(let i=0;i<arrData.length;i++){
-//         <thead>
-//         <tr id="trhead">
-//         <th><p id="pnumQ">1 of 5 question</p></th>
-//         <th>
-//             <div class="timer-div">
-//                 <img style="width: 1.5rem;" src="https://uxwing.com/wp-content/themes/uxwing/download/time-and-date/stopwatch-icon.png"
-//                     width="1rem" />
-//                 <span class="time-left"></span>
-//             </div>
-//         </th>
 
-//     </tr>
-
-// </thead> 
 let body=document.getElementById("tbody");
 // let head=document.getElementById("thead");
 let trQT=document.createElement("tr");

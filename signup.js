@@ -31,6 +31,9 @@ this.user=user;
 this.passWord=passWord;
 this.email=email;
 this.position=position;
+this.html=null,
+this.css=null,
+this.js=null
 }
 
 
@@ -39,15 +42,18 @@ form.addEventListener("submit",handelSubmit)
  function handelSubmit(e){
     e.preventDefault();
 
-const user=
+let user=
      {user:e.target.user.value,
      passWord:e.target.password.value,
      confirm:e.target.confirm.value,
      email:e.target.email.value,
-     position:e.target.position.value
+     position:e.target.position.value,
+     html:null,
+     css:null,
+     js:null
     }
  
-    let infoUser=new User(user.user,user.passWord,user.email,user.position);
+    let infoUser=new User(user.user,user.passWord,user.email,user.position,user.html,user.css,user.js);
    
        if(
             UserValidate(user.user)&&

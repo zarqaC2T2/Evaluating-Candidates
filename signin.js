@@ -33,7 +33,7 @@ function handelSubmitSign(e){
     }
     if(checkArr.includes(userSign.email)&&checkArr[1]==userSign.passWord){
 
-        alert(`welcome ${checkArr[2]} `)    
+        alert(`welcome ${checkArr[2]} `)   
         location.replace("./welcome.html")
     }
         }
