@@ -97,7 +97,7 @@ let Q1 = new Questions(
     "D: Compact Style System",
     "C"
 );
-arrData.push(Q1)
+
 
 
 let Q2 = new Questions(
@@ -108,7 +108,7 @@ let Q2 = new Questions(
     "D: font-style",
     "A"
 );
-arrData.push(Q2)
+
 
 
 let Q3 = new Questions(
@@ -119,7 +119,7 @@ let Q3 = new Questions(
     "D: To change the position of an element",
     "B"
 );
-arrData.push(Q3)
+
 
 let Q4 = new Questions(
     "Q4: Which property is used to set the background color of an element in CSS?",
@@ -129,7 +129,7 @@ let Q4 = new Questions(
     "D: font-color",
     "B"
 );
-arrData.push(Q4)
+
 
 let Q5 = new Questions(
     "Q5: What is the purpose of the 'float' property in CSS?",
@@ -139,9 +139,23 @@ let Q5 = new Questions(
     "D: To create a border around an element",
     "B"
 );
-arrData.push(Q5)
 
-localStorage.setItem('arrData',JSON.stringify(arrData) );
+
+if(arrData[0]==undefined){
+
+    arrData.push(Q1)
+    arrData.push(Q2)
+    arrData.push(Q3)
+    arrData.push(Q4)
+    arrData.push(Q5)
+
+    localStorage.setItem('arrData',JSON.stringify(arrData) );
+    
+ }
+
+
+
+
 
 // hide show results buttons
 let showResultsButton = document.getElementById("ShowResultsButton");

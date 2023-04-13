@@ -97,7 +97,6 @@ let Q1 = new Questions(
     "D: HTML describes the structure of a webpage",
     "C"
     );
-  arrData.push(Q1)
 
 
     let Q2 = new Questions(
@@ -108,7 +107,6 @@ let Q1 = new Questions(
         "D: CSS describes the structure of a webpage",
         "A"
         );
-        arrData.push(Q2)
 
 
         let Q3 = new Questions(
@@ -119,7 +117,6 @@ let Q1 = new Questions(
             "D: JS describes the structure of a webpage",
             "B"
             );
-            arrData.push(Q3)
 
             let Q4 = new Questions(
                 "Q3: What does HTML stand for?",
@@ -129,7 +126,6 @@ let Q1 = new Questions(
                 "D: JS describes the structure of a webpage",
                 "B"
                 );
-                arrData.push(Q4)
     
                 let Q5 = new Questions(
                     "Q3: What does HTML stand for?",
@@ -139,13 +135,18 @@ let Q1 = new Questions(
                     "D: JS describes the structure of a webpage",
                     "B"
                     );
-                    arrData.push(Q5)
-        
 
+                    if(arrData[0]==undefined){
 
-    localStorage.setItem('arrData',JSON.stringify(arrData) );
-
-
+                        arrData.push(Q1)
+                        arrData.push(Q2)
+                        arrData.push(Q3)
+                        arrData.push(Q4)
+                        arrData.push(Q5)
+                    
+                        localStorage.setItem('arrData',JSON.stringify(arrData) );
+                        
+                     }
 
          // hide show results buttons
           let showResultsButton = document.getElementById("ShowResultsButton");
